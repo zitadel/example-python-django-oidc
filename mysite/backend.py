@@ -25,3 +25,21 @@ class PermissionBackend(OIDCAuthenticationBackend):
             return self.UserModel.objects.create_user(username, email=email)
         else:
             return self.UserModel.objects.none()
+
+    def update_user(self, user, claims):
+        permClaim = (
+            "urn:zitadel:iam:org:project:"
+            + self.get_settings("ZITADEL_PROJECT")
+            + ":roles"
+        )
+        
+        if "admin" in claims[permClaim].keys():
+            user.is_superuser = True
+            user.is_staff = True
+        elif "staff" in claims[permClaim].keys():
+            user.is_superuser = False
+            user.is_staff = True
+        elif "user" in claims[permClaim].keys():
+            user.is_superuser = False
+            user.is_staff = False
+        return user

@@ -128,20 +128,15 @@ STATIC_URL = "static/"
 
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
 
-ZITADEL_PROJECT = "249703732336418456"
-
-OIDC_RP_CLIENT_ID = "249703852243222580@python"
-OIDC_RP_CLIENT_SECRET = (
-    "moTkv0nYRWVHKKYWmfXX1A4LgPajwfL7mppuiYrThLmraf6IMheSS5XMKlweoU7L"
-)
+ZITADEL_PROJECT = "ID of the project you created the application in ZITADEL" 
+OIDC_RP_CLIENT_ID = "ClientID provided by the created application in ZITADEL"
+OIDC_RP_CLIENT_SECRET = "ClientSecret provided by the created application in ZITADEL"
 OIDC_RP_SIGN_ALGO = "RS256"
 
-OIDC_OP_JWKS_ENDPOINT = "https://stebenz-chiick.zitadel.cloud/oauth/v2/keys"
-OIDC_OP_AUTHORIZATION_ENDPOINT = (
-    "https://stebenz-chiick.zitadel.cloud/oauth/v2/authorize"
-)
-OIDC_OP_TOKEN_ENDPOINT = "https://stebenz-chiick.zitadel.cloud/oauth/v2/token"
-OIDC_OP_USER_ENDPOINT = "https://stebenz-chiick.zitadel.cloud/oidc/v1/userinfo"
+OIDC_OP_JWKS_ENDPOINT = "https://example.zitadel.cloud/oauth/v2/keys"
+OIDC_OP_AUTHORIZATION_ENDPOINT = "https://example.zitadel.cloud/oauth/v2/authorize"
+OIDC_OP_TOKEN_ENDPOINT = "https://example.zitadel.cloud/oauth/v2/token"
+OIDC_OP_USER_ENDPOINT = "https://example.zitadel.cloud/oidc/v1/userinfo"
 
 LOGIN_REDIRECT_URL = "http://localhost:8000"
 LOGOUT_REDIRECT_URL = "http://localhost:8000"
