@@ -1,4 +1,4 @@
-# Example Python Django with external OIDC Provider
+# Example Python Django with external OIDC Provider for a Wep application
 
 This repository provides a Django example for ZITADEL using OpenID connect (OIDC) authentication instead of the internal authentication mechanism.
 This example is provided as companion to our [guide](https://zitadel.com/docs/examples/login/django),
@@ -26,7 +26,11 @@ Be sure to [configure ZITADEL](https://docs-git-docs-example-symfony-zitadel.ver
 
 ### Prerequisites
 
-You need all prerequisites also listed in the [Quick install quide](https://docs.djangoproject.com/en/5.0/intro/install/).
+You have to install Python as described in [their documentation](https://wiki.python.org/moin/BeginnersGuide/Download) and then download all dependencies through:
+
+```bash
+python -m pip install -r requirements.txt
+```
 
 Alternatively if you have a system with Docker and an IDE capable of running [Development Container](https://containers.dev/),
 definitions are provided with a complete Python environment, configuration and tools required for Django development.
