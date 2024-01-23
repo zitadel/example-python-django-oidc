@@ -42,4 +42,6 @@ class PermissionBackend(OIDCAuthenticationBackend):
         elif "user" in claims[permClaim].keys():
             user.is_superuser = False
             user.is_staff = False
+            
+        user.save()   
         return user
