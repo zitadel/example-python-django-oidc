@@ -56,6 +56,6 @@ And run the server:
 python manage.py runserve
 ```
 
-Visit [http://localhost:8000/admin/], login as the superuser and click around.
+Visit [http://localhost:8000/admin/](http://localhost:8000/admin/), login as the superuser and click around.
 You can create Questions and the availabe Choices, where users can vote on.
-After you can go to [http://localhost:8000/polls/] and vote on different Questions.
+After you can go to [http://localhost:8000/polls/](http://localhost:8000/polls/) and vote on different Questions.
