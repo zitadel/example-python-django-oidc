@@ -6,7 +6,7 @@ which should produce this application when followed.
 
 ## Base
 
-The used base is the "Writing your first Django app"-app from the Django documentation under [https://docs.djangoproject.com/en/5.0/intro/](https://docs.djangoproject.com/en/5.0/intro/), which has documented additional parts in to use [mozilla-django-oidc](https://github.com/mozilla/mozilla-django-oidc) to integrate ZITADEL as AuthenticationBackend.
+The used base is the "Writing your first Django app" from the Django documentation under [https://docs.djangoproject.com/en/5.0/intro/](https://docs.djangoproject.com/en/5.0/intro/), which has documented additional parts in to use [mozilla-django-oidc](https://github.com/mozilla/mozilla-django-oidc) to integrate ZITADEL as AuthenticationBackend.
 
 ## Features
 
@@ -22,7 +22,7 @@ The used base is the "Writing your first Django app"-app from the Django documen
 ## Getting started
 
 If you want to run this example directly you can fork and clone it to your system.
-Be sure to [configure ZITADEL](https://docs-git-docs-example-symfony-zitadel.vercel.app/docs/examples/login/symfony#zitadel-setup) to accept requests from this app.
+Be sure to [configure ZITADEL](https://docs-git-python-django-example-zitadel.vercel.app/docs/examples/login/django#zitadel-setup) to accept requests from this app.
 
 ### Prerequisites
 
@@ -44,18 +44,31 @@ After setting up your system and repository, create the sqlite-database.
 python manage.py migrate
 ```
 
-Create a local superuser with username, email and password:
+Fill in the `.env`-file in your directory with the following information:
 
 ```bash
-python manage.py createsuperuser
+ZITADEL_PROJECT = "ID of the project you created the application in ZITADEL" 
+OIDC_RP_CLIENT_ID = "ClientID provided by the created application in ZITADEL"
+OIDC_RP_CLIENT_SECRET = "ClientSecret provided by the created application in ZITADEL"
+OIDC_OP_BASE_URL = "Base URL for your ZITADEL instance"
+```
+
+I should look something like this:
+
+```bash
+ZITADEL_PROJECT = "249703732336418456" 
+OIDC_RP_CLIENT_ID = "249703852243222580@python"
+OIDC_RP_CLIENT_SECRET = "Zy3OOHaMBTj2sfamW87Vak5BeQ3nEpOf7suPKTnJKaScMh0lPJqUeDOZmgL3bdGa"
+OIDC_OP_BASE_URL = "https://example.zitadel.cloud"
 ```
 
 And run the server:
 
 ```bash
-python manage.py runserve
+python manage.py runserver
 ```
 
-Visit [http://localhost:8000/admin/](http://localhost:8000/admin/), login as the superuser and click around.
+Visit [http://localhost:8000/](http://localhost:8000/), where you see all available endpoints.
+
 You can create Questions and the availabe Choices, where users can vote on.
 After you can go to [http://localhost:8000/polls/](http://localhost:8000/polls/) and vote on different Questions.

@@ -1,0 +1,37 @@
+<h1>Home</h1>
+<p>You are viewing the public homepage of the ZITADEL Django example web app.</p>
+
+<h2> Public pages</h2>
+<p>
+    Browsing to one of the following pages will NOT trigger OIDC authentication flow.
+</p>
+<ul>
+    <li>
+        <a href="/user">user</a>:
+        View profile data of the authenticated Django-user, if not authenticated then option for login.
+        No special roles required.
+    </li>
+    <li>
+        <a href="/oidc/authenticate">login</a>:
+        Login to AuthenticationBackend.
+    </li>
+    <li>
+        <a href="/polls/">polls</a>:
+        List all availbe polls.
+        No special roles required.
+        Login required to see details of polls and to vote, Staff role required to see results.
+    </li>
+</ul>
+
+
+<h2>Authenticated pages</h2>
+<p>
+    Browsing to one of the following pages will trigger OIDC authentication flow.
+</p>
+<ul>
+    <li>
+        <a href="/admin">admin</a>:
+        User management by Django.
+        Admin role required.
+    </li>
+</ul>
