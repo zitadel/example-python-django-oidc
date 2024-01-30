@@ -35,7 +35,7 @@ class DetailView(generic.DetailView):
         return Question.objects.filter(pub_date__lte=timezone.now())
 
 
-@method_decorator(staff_member_required, name="dispatch")
+@method_decorator(login_required, name="dispatch")
 class ResultsView(generic.DetailView):
     model = Question
     template_name = "polls/results.html"

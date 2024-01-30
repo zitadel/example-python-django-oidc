@@ -4,6 +4,8 @@ from django.contrib import admin
 
 
 class PermissionBackend(OIDCAuthenticationBackend):
+    def get_username(self, claims):
+        return claims.get("sub")
     def create_user(self, claims):
         email = claims.get("email")
         username = self.get_username(claims)
