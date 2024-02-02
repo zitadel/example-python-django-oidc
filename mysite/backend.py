@@ -14,6 +14,7 @@ class PermissionBackend(OIDCAuthenticationBackend):
             + self.get_settings("ZITADEL_PROJECT")
             + ":roles"
         )
+        
 
         if "admin" in claims[permClaim].keys():
             user = self.UserModel.objects.create_user(
