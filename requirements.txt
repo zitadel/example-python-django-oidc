@@ -1,4 +1,4 @@
 # To ensure app dependencies are ported from your virtual environment/host machine into your container, run 'pip freeze > requirements.txt' in the terminal to overwrite this file
-django==5.0.2
+django==5.0.3
 python-dotenv==1.0.0
 mozilla-django-oidc==4.0.0
