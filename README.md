@@ -1,3 +1,7 @@
+> [\!WARNING]
+> This repository is archived and no longer maintained.
+> For the latest version and active development, please refer to [zitadel/example-auth-django](https://github.com/zitadel/example-auth-django).
+
 # Example Python Django with external OIDC Provider for a Wep application
 
 This repository provides a Django example for ZITADEL using OpenID connect (OIDC) authentication instead of the internal authentication mechanism.
